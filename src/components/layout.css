@@ -684,3 +684,18 @@ body {
 .k-div {
   grid-area: e;
 }
+
+p:hover {
+  /* on hover - scale to this x,y size */
+  transform: scale(1.5,1.5);
+  /* property values: name, duration, iteration, timing-function */
+  animation: jigglin 0.15s infinite linear;
+}
+
+@keyframes jigglin {
+  0% {transform: rotate(0deg) scale(1.15,1.15);}
+  /* midway rotate 2deg right */
+  50% {transform: rotate(5deg) scale(1.15,1.15);}
+  /* end rotate -2deg left */
+  100% {transform: rotate(-3deg) scale(1.15,1.15)}
+}
